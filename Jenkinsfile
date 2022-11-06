@@ -1,4 +1,4 @@
-@Library(['android-pipeline', 'general-pipeline']) _
+@Library(['android-pipeline']) _
 
 node('master') {
     withEnv(['DEVELOPMENT_MODE=true']) {
