@@ -10,7 +10,7 @@ node('master') {
                             action: { devices, message ->
                                 slackMessage channel: 'jenkins', text: message
                             }
-                    git url: 'git@github.com:emartech/android-mobile-engage-sample-app.git', branch: 'master'
+                    git url: 'git@github.com:snehamore213/android-mobile-engage-sample-app.git', branch: 'master'
 
                     def testFileCount = sh(returnStdout: true, script: 'find . -name  "*Test.java" | wc -l').trim() as Integer
                     def timeoutRuleCount = sh(returnStdout: true, script: 'grep -r "^\\s*public TestRule timeout = TimeoutUtils.getTimeoutRule();" . | wc -l').trim() as Integer
