@@ -1,6 +1,6 @@
 
 
-node('master') {
+node{
     withEnv(['DEVELOPMENT_MODE=true']) {
         timeout(15) {
             withSlack channel: 'jenkins', {
